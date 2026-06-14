@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sauveur BANA | Projets</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" type="image/png" href="/image/profil.png">
+    <script src="../style/script.js"></script>
+
+    <style>
+        .projects-container{
+            padding:5px 8%;
+            max-width:1400px;
+            margin:auto;
+
+        }
+
+        .projects-hero{
+            text-align:center;
+            margin-bottom:60px;
+
+        }
+
+
+        .projects-hero h1{
+            font-size:55px;
+            margin-bottom:15px;
+
+        }
+
+
+        .projects-hero p{
+            opacity:.7;
+        }
+
+
+        .filters{
+            display:flex;
+            justify-content:center;
+            gap:15px;
+            flex-wrap:wrap;
+            margin-bottom:50px;
+
+        }
+
+        .filter-btn{
+            padding:12px 25px;
+            border:none;
+            border-radius:30px;
+            cursor:pointer;
+            background:rgba(255,255,255,.05);
+            color:white;
+            transition:.4s;
+
+        }
+
+
+        .filter-btn.active{
+            background:linear-gradient(90deg,#6d5dfc,#00d4ff);
+        }
+
+        .projects-grid{
+            display:grid;
+            grid-template-columns:
+            repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+            margin-bottom:60px;
+
+        }
+
+        .project-card{
+            background:rgba(255,255,255,.05);
+            padding:20px;
+            border-radius:20px;
+            transition:.5s;
+            cursor:pointer;
+
+        }
+
+
+        .project-card:hover{
+            transform:translateY(-10px);
+        }
+
+
+        .project-card img{
+            width:100%;
+            height:200px;
+            object-fit:cover;
+            border-radius:15px;
+            margin-bottom:15px;
+
+        }
+
+        .stats{
+            display:grid;
+            grid-template-columns:
+            repeat(3,1fr);
+            gap:30px;
+
+        }
+
+        .stat-card{
+            text-align:center;
+            padding:30px;
+            background:rgba(255,255,255,.05);
+            border-radius:20px;
+
+        }
+
+        .btn-pj{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.12);
+            background: #000103;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
+
+        .btn-pj:hover{
+            background: #0768ef;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+        }
+
+        .btn-pj:active{
+            transform: translateY(0);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
+
+        .btn-pj:focus-visible{
+            outline: 3px solid rgba(59,130,246,0.6);
+            outline-offset: 3px;
+        }
+
+        @media(max-width:900px){
+            .featured-project{
+                flex-direction:column;
+
+            }
+
+            .stats{
+                grid-template-columns:1fr;
+
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <!--body-->
+    <main class="projects-container">
+
+        <section class="projects-hero">
+
+            <h1>Mes projets</h1>
+            <p>
+                Découvrez mes projets, réalisations et expériences
+                dans différents domaines technologiques.
+            </p>
+
+        </section>
+
+        <!-- FILTRES -->
+        <div class="filters">
+
+            <button class="filter-btn active" data-filter="all">
+                Tous
+            </button>
+
+            <button class="filter-btn" data-filter="reseaux-systemes">
+                Réseaux & Systèmes
+            </button>
+
+            <button class="filter-btn" data-filter="web">
+                Développement Web
+            </button>
+
+            <button class="filter-btn" data-filter="personnel">
+                Personnel
+            </button>
+
+        </div>
+
+
+        <!-- AUTRES PROJETS -->
+        <section class="projects-grid">
+
+            <div class="project-card" data-category="web">
+
+                <img src="../image/portefolio.png">
+
+                <h2>Site Portfolio</h2>
+                <br>
+                <h3>Description</h3>
+            
+                <p>
+                    Conception et développement d'un portfolio personnel destiné à présenter mon parcours, mes compétences, mes expériences et mes réalisations professionnelles.
+                </p>
+                <br>
+
+                <h3>Objectifs</h3>
+                <ul>
+                    <li>Créer une présence professionnelle en ligne.</li>
+                    <li>Valoriser mes compétences techniques.</li>
+                    <li>Faciliter les prises de contact avec les recruteurs et partenaires.</li>
+                </ul>
+                <br>
+
+                <h3>Technologies utilisées</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Bootstrap</li>
+                </ul>
+                <br>
+
+                <h3>Fonctionnalités</h3>
+                <ul>
+                    <li>Présentation personnelle.</li>
+                    <li>Affichage des compétences.</li>
+                    <li>Présentation des projets.</li>
+                    <li>Formulaire de contact.</li>
+                    <li>Téléchargement du CV.</li>
+                </ul>
+                <br>
+
+                <h3>Compétences développées</h3>
+                <ul>
+                    <li>Développement Front-End.</li>
+                    <li>Responsive Design.</li>
+                    <li>Intégration Web.</li>
+                    <li>Conception d'interfaces utilisateur.</li>
+                </ul>
+                <br>
+
+                <h3>Résultats</h3>
+                <p>Création d'une plateforme professionnelle moderne permettant de présenter efficacement mon profil et mes réalisations.</p>
+            </div>
+
+            <div class="project-card" data-category="reseaux-systemes">
+
+                <img src="../image/image.png">
+
+                <h2>Infrastructure Active Directory sous Windows-Server 2022</h2>
+                <br>
+
+                <h3>Description</h3>
+                <p>
+                    Mise en place d'une infrastructure client-serveur basée sur Windows-Server 2022 permettant l'administration centralisée des utilisateurs, des ordinateurs et des ressources réseau au sein d'un domaine Active Directory.
+                </p>
+                <br>
+
+                <h3>Objectifs</h3>
+                <ul>
+                    <li>Comprendre l'architecture d'un environnement Active Directory.</li>
+                    <li>Déployer un serveur Windows dans un environnement professionnel.</li>
+                    <li>Centraliser la gestion des utilisateurs et des postes de travail.</li>
+                </ul>
+                <br>
+
+                <h3>Technologies utilisees</h3>
+                <ul>
+                    <li>Windows Server 2022</li>
+                    <li>Active Directory Domain Services (AD DS)</li>
+                    <li>DNS</li>
+                    <li>DHCP</li>
+                    <li>Windows 10</li>
+                </ul>
+                <br>
+
+                <h3>Compétences développées</h3>
+                <ul>
+                    <li>Installation et configuration de Windows Server.</li>
+                    <li>Création et administration d'un domaine Active Directory.</li>
+                    <li>Gestion des utilisateurs, groupes et unités d'organisation.</li>
+                    <li>Configuration des services DNS et DHCP.</li>
+                    <li>Administration d'un environnement client-serveur.</li>
+                </ul>
+                <br>
+
+                <h3>Résultats</h3>
+                <p>Déploiement d'une infrastructure fonctionnelle permettant l'authentification centralisée des utilisateurs et l'administration des ressources réseau.</p>
+                <br>
+
+                <a href="/pdf/wds.pdf" class="btn-pj" target="_blank">
+                    Voir le projet
+                </a>
+            </div>
+
+            <div class="project-card" data-category="personnel">
+
+                <img src="../image/bjservice.jpg">
+
+                <h3>Projet Personnel</h3>
+                <p>Entrepreneuriat & Services Numériques</p>
+                <br>
+
+                <h3>Description</h3>
+                <p>Création et gestion de BJServices, une activité indépendante proposant divers services numériques destinés aux particuliers.</p>
+                <br>
+
+                <h3>Objectifs</h3>
+                <ul>
+                    <li>Développer une activité génératrice de revenus.</li>
+                    <li>Acquérir une expérience concrète en gestion d'entreprise.</li>
+                    <li>Développer des compétences commerciales et organisationnelles.</li>
+                </ul>
+                <br>
+
+                <h3>Responsabilités</h3>
+                <ul>
+                    <li>Gestion des clients.</li>
+                    <li>Gestion des prestations de services.</li>
+                    <li>Communication digitale.</li>
+                    <li>Élaboration de procédures et documents administratifs.</li>
+                    <li>Gestion des opérations quotidiennes.</li>
+                </ul>
+                <br>
+
+                <h3>Compétences développées</h3>
+                <ul>
+                    <li>Relation client.</li>
+                    <li>Gestion de projet.</li>
+                    <li>Négociation commerciale.</li>
+                    <li>Organisation et planification.</li>
+                    <li>Communication professionnelle.</li>
+                </ul>
+                <br>
+
+                <h3>Résultats</h3>
+                <p>Développement d'une activité entrepreneuriale permettant de mettre en pratique des compétences en gestion, communication et service client.</p>
+            </div>
+
+        </section>
+
+        <!-- STATISTIQUES -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <h2>10+</h2>
+                <p>Projets réalisés</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>5+</h2>
+                <p>Technologies</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>100%</h2>
+                <p>Engagement</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div id="footer"></div>
+    <script>
+
+        fetch("../header/header.html")
+        .then(response=>response.text())
+        .then(data=>{
+           document.getElementById("header").innerHTML=data;
+        })
+
+        fetch("../footer/footer.html")
+        .then(response=>response.text())
+        .then(data=>{
+            document.getElementById("footer").innerHTML=data;
+        })
+
+    </script>
+
+    <script src="../style/script.js"></script>
+  
+    <!--partie Projets-->
+
+<script>
+
+    document.addEventListener("DOMContentLoaded",()=>{
+
+        const filters= document.querySelectorAll(".filter-btn");
+        const cards= document.querySelectorAll(".project-card");
+
+        filters.forEach(button=>{
+            button.addEventListener("click",()=>{
+
+                filters.forEach(btn=>{
+                    btn.classList.remove("active");
+
+                });
+
+                button.classList.add("active");
+
+                const filter= button.dataset.filter;
+
+                cards.forEach(card=>{
+
+                const category= card.dataset.category;
+
+
+                if(
+                filter==="all"
+                ||
+                category===filter
+                ){
+                    card.style.display="block";
+                }
+                else{
+                    card.style.display="none";
+                }
+
+                });
+
+            });
+
+        });
+
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sauveur BANA | Projets</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" type="image/png" href="/image/profil.png">
+    <script src="../style/script.js"></script>
+
+    <style>
+        .projects-container{
+            padding:5px 8%;
+            max-width:1400px;
+            margin:auto;
+
+        }
+
+        .projects-hero{
+            text-align:center;
+            margin-bottom:60px;
+
+        }
+
+
+        .projects-hero h1{
+            font-size:55px;
+            margin-bottom:15px;
+        }
+
+
+        .projects-hero p{
+            opacity:.7;
+
+        }
+
+
+        .filters{
+            display:flex;
+            justify-content:center;
+            gap:15px;
+            flex-wrap:wrap;
+            margin-bottom:50px;
+
+        }
+
+
+        .filter-btn{
+            padding:12px 25px;
+            border:none;
+            border-radius:30px;
+            cursor:pointer;
+            background:rgba(255,255,255,.05);
+            color:white;
+            transition:.4s;
+
+        }
+
+
+        .filter-btn.active{
+            background:linear-gradient( 90deg,#6d5dfc,#00d4ff );
+
+        }
+
+        .projects-grid{
+            display:grid;
+            grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+            margin-bottom:60px;
+
+        }
+
+        .project-card{
+            background:rgba(255,255,255,.05);
+            padding:20px;
+            border-radius:20px;
+            transition:.5s;
+            cursor:pointer;
+
+        }
+
+        .project-card:hover{
+            transform:translateY(-10px);
+
+        }
+
+
+        .project-card img{
+            width:100%;
+            height:200px;
+            object-fit:cover;
+            border-radius:15px;
+            margin-bottom:15px;
+
+        }
+
+
+        .stats{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:30px;
+
+        }
+
+
+        .stat-card{
+            text-align:center;
+            padding:30px;
+            background:rgba(255,255,255,.05);
+            border-radius:20px;
+
+        }
+
+
+        @media(max-width:900px){
+            .featured-project{
+                flex-direction:column;
+            }
+
+            .stats{
+                grid-template-columns:1fr;
+
+            }
+
+        }
+
+        .skills-container{
+
+            display:grid;
+            gap:35px;
+
+        }
+
+
+        .skill-list{
+            display:flex;
+            flex-wrap:wrap;
+            gap:12px;
+            margin-top:20px;
+
+        }
+
+
+        .skill-list span{
+            padding:10px 15px;
+            background:rgba(255,255,255,.06);
+            border-radius:30px;
+            font-size:14px;
+            transition:.4s;
+
+        }
+
+
+        .skill-list span:hover{
+            transform:translateY(-4px);
+            background:linear-gradient( 90deg,#6d5dfc,#00d4ff);
+
+        }
+
+
+        .project-card{
+            padding:30px;
+            cursor:default;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <!--body-->
+
+    <main class="projects-container">
+
+        <section class="projects-hero">
+
+                <h1>Mes domaines de Compétences</h1>
+
+                <p>Découvrez mes domaines de competences, mon savoir faire et d'expertise dans différents domaines technologiques.</p>
+
+        </section>
+
+
+        <!-- FILTRES -->
+
+        <div class="filters">
+
+                <button class="filter-btn"
+                    data-filter="reseaux">
+
+                    Réseaux
+
+                </button>
+
+                <button class="filter-btn"
+                data-filter="systemes">
+
+                    Systèmes
+
+                </button>
+
+                <button class="filter-btn"
+                data-filter="telecom">
+
+                    Télécommunications
+
+                </button>
+
+                <button class="filter-btn"
+                data-filter="cyber">
+
+                    Cybersécurité
+
+                </button>
+
+                <button class="filter-btn"
+                data-filter="web">
+
+                    Développement Web
+
+                </button>
+
+                <button class="filter-btn"
+                data-filter="professionnel">
+
+                    Professionnel
+
+                </button>
+
+        </div>
+
+
+        <!-- AUTRES PROJETS -->
+
+        <section class="skills-container">
+
+            <!-- RESEAUX -->
+
+            <div class="project-card" data-category="reseaux">
+
+                <h2>Réseaux Informatiques</h2>
+
+                <p> Connaissances en conception,administration et maintenance des infrastructures réseau.</p>
+
+                <div class="skill-list">
+
+                    <span>Architecture Réseau</span>
+                    <span>Administration Réseau</span>
+                    <span>TCP/IP</span>
+                    <span>IPv4</span>
+                    <span>Subnetting</span>
+                    <span>VLAN</span>
+                    <span>Routage</span>
+                    <span>Switching</span>
+                    <span>DNS</span>
+                    <span>DHCP</span>
+                    <span>NAT</span>
+                    <span>OSI</span>
+                    <span>TCP/IP</span>
+                    <span>Dépannage</span>
+
+                </div>
+
+            </div>
+
+            <!-- SYSTEMES -->
+
+            <div class="project-card" data-category="systemes">
+
+                <h2>Systèmes & Serveurs</h2>
+
+                <p> Administration des systèmes et gestion d'environnements serveurs. </p>
+
+                <div class="skill-list">
+
+                    <span>Windows Server</span>
+                    <span>Active Directory</span>
+                    <span>Gestion utilisateurs</span>
+                    <span>Linux</span>
+                    <span>Gestion services</span>
+                    <span>Permissions</span>
+                    <span>Sauvegardes</span>
+                    <span>Maintenance</span>
+                    <span>Diagnostic système</span>
+                </div>
+
+            </div>
+
+            <!-- TELECOM -->
+
+            <div class="project-card" data-category="telecom">
+
+                <h2>Télécommunications</h2>
+
+                <p> Compétences développées dans les environnements télécom. </p>
+
+                <div class="skill-list">
+                    <span>Support Télécom</span>
+                    <span>Diagnostic incidents</span>
+                    <span>Assistance technique</span>
+                    <span>Réseaux entreprise</span>
+                    <span>Maintenance</span>
+                </div>
+
+            </div>
+
+            <!-- CYBER -->
+
+            <div class="project-card" data-category="cyber">
+
+                <h2>Cybersécurité</h2>
+
+                <p> Protection et sécurisation des systèmes. </p>
+
+                <div class="skill-list">
+                    <span>Gestion accès</span>
+                    <span>Sécurisation infrastructures</span>
+                    <span>Droits utilisateurs</span>
+                    <span>Bonnes pratiques</span>
+                    <span>Sécurisation Windows</span>
+                    <span>Sécurisation Linux</span>
+                </div>
+
+            </div>
+
+            <!-- WEB -->
+
+            <div class="project-card" data-category="web">
+
+                <h2>Développement Web</h2>
+
+                <p> Création d'interfaces modernes et responsives. </p>
+
+                <div class="skill-list">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Bootstrap</span>
+                    <span>Responsive Design</span>
+                    <span>Intégration Web</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROFESSIONNEL -->
+
+            <div class="project-card" data-category="professionnel">
+
+                <h2>Professionnel</h2>
+
+                <p> Compétences complémentaires et qualités professionnelles. </p>
+
+                <div class="skill-list">
+
+                    <span>Gestion projet</span>
+                    <span>Relation client</span>
+                    <span>Communication</span>
+                    <span>Organisation</span>
+                    <span>Travail équipe</span>
+                    <span>Autonomie</span>
+                    <span>Adaptabilité</span>
+                    <span>Esprit analyse</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div id="footer"></div>
+    <script>
+
+        fetch("../header/header.html")
+        .then(response=>response.text())
+        .then(data=>{
+           document.getElementById("header").innerHTML=data;
+        })
+
+        fetch("../footer/footer.html")
+        .then(response=>response.text())
+        .then(data=>{
+         document.getElementById("footer").innerHTML=data;
+        })
+
+    </script>
+
+    <script src="../style/script.js"></script>
+  
+    <!--partie Projets-->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded",()=>{
+
+            const filters= document.querySelectorAll(".filter-btn");
+            const cards= document.querySelectorAll(".project-card");
+
+            filters.forEach(button=>{
+                button.addEventListener("click",()=>{
+
+                filters.forEach(btn=>{
+                    btn.classList.remove("active");
+
+                });
+
+                button.classList.add("active");
+
+
+                const filter= button.dataset.filter;
+
+                cards.forEach(card=>{
+
+                    const category= card.dataset.category;
+
+
+                    if(
+                        filter==="all"
+                        ||
+                        category===filter
+                    ){
+                        card.style.display="block";
+
+                    }
+                    else{
+
+                    card.style.display="none";
+
+                    }
+
+                });
+
+                });
+
+            });
+
+        });
+
+    </script>
+</body>
+</html>
