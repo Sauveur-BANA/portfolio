@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
-    <script src="style/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 
     <style>
         .hero{
@@ -258,11 +258,11 @@
 
             <div class="hero-buttons">
 
-                <a href="../contact/contact.html" class="btn-secondary">
+                <a href="contact.html" class="btn-secondary">
                     Me contacter
                 </a>
 
-                <a href="/pdf/cv.pdf" class="btn-secondary" target="_blank">
+                <a href="pdf/cv.pdf" class="btn-secondary" target="_blank">
                     CV
                 </a>
 
@@ -288,13 +288,13 @@
 
 
     <script>
-        fetch("header/header.html")
+        fetch("header.html")
         .then(response=>response.text())
         .then(data=>{
             document.getElementById("header").innerHTML=data;
         })
 
-        fetch("footer/footer.html")
+        fetch("footer.html")
         .then(response=>response.text())
         .then(data=>{
             document.getElementById("footer").innerHTML=data;
@@ -302,6 +302,6 @@
     </script>
 
     <div id="footer"></div>
-    <script src="style/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
