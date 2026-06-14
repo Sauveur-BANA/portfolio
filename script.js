@@ -1,8 +1,11 @@
-const hamburger=document.getElementById("hamburger");
-const navMenu=document.getElementById("navMenu");
-hamburger.addEventListener("click",()=>{
-    navMenu.classList.toggle("active");
-});
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
+}
 
 //Page d'A propos
 
