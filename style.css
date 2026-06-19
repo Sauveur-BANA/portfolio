@@ -174,14 +174,16 @@ body{
         display:none;
         flex-direction:column;
         border-radius:20px;
+        z-index:9999;
     }
-
+    
     .nav-menu.active{
         display:flex;
     }
 
     .hamburger{
         display:flex;
+        z-index:10000;
     }
 
     .project-btn{

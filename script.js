@@ -1,11 +1,12 @@
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
+fetch("header.html")
+.then(response => response.text())
+.then(data => {
 
-if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-    });
-}
+    document.getElementById("header").innerHTML = data;
+
+    initMenu();
+
+});
 
 //Page d'A propos
 
@@ -69,5 +70,23 @@ accordionHeaders.forEach(header=>{
 
 });
 
-//Partie projets
 
+
+function initMenu() {
+
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+
+    if (hamburger && navMenu) {
+
+        hamburger.addEventListener("click", () => {
+
+            console.log("CLICK");
+
+            navMenu.classList.toggle("active");
+
+        });
+
+    }
+
+}

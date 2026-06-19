@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <meta name="description" content="Portfolio officiel de Sauveur BANA, étudiant en Informatiques à Dakar. Compétences en réseaux, systèmes, cybersécurité, télécommunications et développement web.">
+    <meta name="keywords" content="Sauveur BANA, Kenny BANA, Sauveur, BANA, Kenny, Gacha, Rolph, Sauveur Bana portfolio,Sauveur BANA site internet, Sauveur Bana Dakar, Réseaux informatiques, Cybersécurité, Développement Web,Réseaux telecom, télécommunications">
 
     <style>
         .hero{
@@ -288,18 +289,24 @@
 
 
     <script>
-        fetch("header.html")
-        .then(response=>response.text())
-        .then(data=>{
-            document.getElementById("header").innerHTML=data;
-        })
+    fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
 
-        fetch("footer.html")
-        .then(response=>response.text())
-        .then(data=>{
-            document.getElementById("footer").innerHTML=data;
-        })
-    </script>
+        document.getElementById("header").innerHTML = data;
+
+        initMenu(); // Active le menu hamburger après chargement du header
+
+    });
+
+    fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+
+        document.getElementById("footer").innerHTML = data;
+
+    });
+</script>
 
     <div id="footer"></div>
     <script src="script.js"></script>

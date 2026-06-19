@@ -6,7 +6,6 @@
     <title>sauveur BANA | Competences</title>
     <link rel="icon" type="image/png" href="image/logo.png">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 
     <style>
         .about-container{
@@ -196,12 +195,99 @@
             line-height:1.8;
 
         }
+        /* RESPONSIVE A PROPOS */
+
+        @media (max-width: 900px){
+
+            .about-container{
+                padding: 10px 5%;
+            }
+
+            .title{
+                font-size: 38px;
+            }
+
+            .tabs{
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .tab-btn{
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+
+            .timeline{
+                padding-left: 30px;
+            }
+
+            .timeline-dot{
+                left: -30px;
+            }
+
+            .timeline-card{
+                padding: 20px;
+            }
+
+        }
+
+        @media (max-width: 600px){
+
+            .title{
+                font-size: 30px;
+                line-height: 1.2;
+            }
+
+            .subtitle{
+                font-size: 15px;
+                margin-bottom: 30px;
+            }
+
+            .tabs{
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .tab-btn{
+                width: 100%;
+                text-align: center;
+            }
+
+            .timeline{
+                padding-left: 22px;
+            }
+
+            .timeline::before{
+                left: 3px;
+            }
+
+            .timeline-dot{
+                width: 14px;
+                height: 14px;
+                left: -19px;
+            }
+
+            .timeline-card{
+                padding: 18px;
+            }
+
+            .timeline-card h3{
+                font-size: 18px;
+            }
+
+            .timeline-card p,
+            .timeline-card li,
+            .intro{
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+        }
     </style>
 </head>
 <body>
     <div id="header"></div>
 
-<main class="about-container">
 <main class="about-container">
 
     <h1 class="title">À propos de moi</h1>
@@ -451,7 +537,7 @@
 </main>
 
 
-</main>
+
 
 
 
