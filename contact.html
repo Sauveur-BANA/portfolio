@@ -243,27 +243,39 @@
 
         @media(max-width:950px){
 
-            .contact-container{
-                flex-direction:column;
-                padding: 20px;
-            }
-
-            h1{
-                font-size:30px;
-            }
-
-            .cards{
-                grid-template-columns:1fr;
-            }
-            .left-side,
-            .right-side{
-                width: 100%;
-            }
-
-            body{
-                padding:25px;
-            }
+        .contact-container{
+            flex-direction:column;
+            gap:40px;
+            padding:20px;
         }
+
+        .left-side,
+        .right-side{
+            width:90%;
+        }
+
+        h1{
+            font-size:32px;
+            text-align:center;
+        }
+
+        .description{
+            text-align:justify;
+        }
+
+        .cards{
+            grid-template-columns:repeat(2,1fr);
+        }
+
+        .socials{
+            justify-content:center;
+        }
+
+        body{
+            padding-top:90px;
+        }
+
+    }
 
         /*Confrmation d'envoie de mails*/
         .success-message{
@@ -290,8 +302,8 @@
         /* Notification moderne */
         .toast-notification{
             position:fixed;
-            top:5px;
-            right:-500px;
+            top:20px;
+            right:20px;
             display:flex;
             align-items:center;
             gap:15px;
@@ -303,12 +315,12 @@
             border-radius:18px;
             box-shadow:0 10px 30px rgba(0,0,0,.3);
             z-index:9999;
-            transition:all .7s ease;
-
+            transform:translateX(120%);
+            transition:transform .7s ease;
         }
 
         .toast-notification.show{
-            right:30px;
+            transform:translateX(0);
         }
 
 
@@ -320,15 +332,16 @@
 
 
         /* Responsive */
-        @media(max-width:600px){
+       @media(max-width:600px){
+
             .toast-notification{
                 width:90%;
-                right:-100%;
-
+                right:5%;
+                transform:translateX(120%);
             }
 
             .toast-notification.show{
-                right:5%;
+                transform:translateX(0);
             }
 
         }
